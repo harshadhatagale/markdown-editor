@@ -7,13 +7,20 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Editor() {
   const [code, setCode] = useState("# Enter Your Text Here!");
   const [copied, isCopied]= useState(false);
-  
+  const [small, setSmall]= useState(false);
   function codeChange(e) {
     setCode(e.target.value);
     isCopied(e.target.false);
   }
   const textarea= document.getElementById("code-area");
-
+  window.onload=function(){
+    if(window.innerWidth>768){
+      setSmall(true)
+    }
+    else{
+      setSmall(false)
+    }
+  }
   function clear(){
     setCode("");
     toast.success("Text Cleared Succesfully",{
@@ -44,6 +51,7 @@ export default function Editor() {
   }
   return (
     <>
+   {small ? "<p className='note'>* Use desktop mode & landscape oriantation for better experience </p>": ""} 
      <div className='editor'>
       <div className="codearea">
         <div className="buttons">

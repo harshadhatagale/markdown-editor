@@ -51,6 +51,11 @@
     font-weight: bold;
     border: none;
 }
+.note{
+    color: red;
+    padding: 1em;
+    font-family: poppins;
+}
 .md-prev{
     padding: 0.5em;
     font-size: 15px;
