@@ -2,11 +2,12 @@
     height: 80vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 20%;
 }
 .codearea{
+    border-radius: 5%;
+    scrollbar-color: cyan;
     font-family: ubuntu;
     height: 70%;
     background: rgb(26, 25, 27);
@@ -47,7 +48,6 @@
     align-items: center;
     color: white;
     gap: 5px;
-    
     font-weight: bold;
     border: none;
 }
@@ -62,15 +62,15 @@
 }
 .buttons{
     width: 100%;
-    padding-top: 01em;
-    height: 10%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     padding-right: 5em;
     gap: 1em;
     display: flex;
     justify-content: end;
     align-items: center;
     padding-right: 1em;
-   position: absolute;
+    position: absolute;
     top: 0;
     right: 0;
 }
@@ -91,4 +91,23 @@
 }
 .buttons button:hover{
     outline: 5px solid rgb(64, 244, 64);
+}
+@media only screen and (max-width:600px) {
+    .editor{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: red;
+        justify-content: space-between;
+    }
+    .codearea{
+        height: 100%;
+        border-radius: 0px;
+        width: 50%;
+    }
+    .preview{
+        height: 100%;
+        border-radius: 0px;
+        width: 50%;
+    }
 }
